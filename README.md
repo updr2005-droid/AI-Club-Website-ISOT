@@ -534,36 +534,6 @@ The website follows an iterative development approach where feedback is used to 
 
 ---
 
-## Suggested README Visuals
-
-The README can also include the following visual sections:
-
-### Website Overview
-
-![AI Club Website Overview](assets/images/website-overview.png)
-
-### Workflow Diagram
-
-![AI Club Workflow](assets/images/ai-club-workflow.png)
-
-### Website Architecture
-
-![Website Architecture](assets/images/website-architecture.png)
-
-### Events Section
-
-![AI Club Events](assets/images/events.png)
-
-### Project Showcase
-
-![AI Club Projects](assets/images/projects.png)
-
-### Team Section
-
-![AI Club Team](assets/images/team.png)
-
----
-
 ## Design and Documentation Philosophy
 
 The AI Club website is designed around three core principles:
