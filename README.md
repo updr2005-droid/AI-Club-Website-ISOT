@@ -180,16 +180,6 @@ The website can be deployed using platforms such as:
 
 ---
 
-## 📸 Website Preview
-
-Add screenshots of the website here:
-
-```text
-![AI Club Website](assets/images/website-preview.png)
-```
-
----
-
 ## 📢 Events & Initiatives
 
 The AI Club actively participates in and organizes technology-focused initiatives, including:
