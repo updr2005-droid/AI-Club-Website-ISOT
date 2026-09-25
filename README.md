@@ -243,10 +243,10 @@ git push origin feature/new-feature
 📍 Bengaluru, Karnataka, India
 
 🔗 **GitHub:**
-https://github.com/
+https://github.com/updr2005-droid/AI-Club-Website-ISOT
 
 🔗 **LinkedIn:**
-https://www.linkedin.com/
+https://www.linkedin.com/in/ifim-school-of-technology-isot-6549ba3aa/
 
 For collaborations, workshops, project ideas, and technical initiatives, connect with the AI Club.
 
