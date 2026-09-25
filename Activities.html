@@ -1,0 +1,2598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>AI Club Activities | IFIM College | Workshops, Hackathons & Projects</title>
+    <meta name="description" content="Explore all AI Club activities at IFIM College - workshops, hackathons, research projects, guest lectures, competitions and more.">
+    <meta name="keywords" content="AI Club Activities, IFIM College, AI Workshops, Hackathons, Machine Learning Projects, Data Science">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #7c3aed;
+            --accent-color: #06b6d4;
+            --light-color: #ffffff;
+            --light-gray: #f8fafc;
+            --gray-light: #f1f5f9;
+            --gray-color: #64748b;
+            --dark-color: #0f172a;
+            --dark-light: #334155;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --gradient-light: linear-gradient(135deg, var(--light-color), var(--light-gray));
+            --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.15);
+            
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            
+            --border-radius-sm: 6px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 16px;
+            --border-radius-xl: 24px;
+            
+            --container-width: 1200px;
+            --section-spacing: 80px;
+            --header-height: 120px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--header-height);
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: var(--light-gray);
+        }
+
+        /* ===== SCROLL PROGRESS BAR ===== */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(241, 245, 249, 0.2);
+            z-index: 1001;
+        }
+
+        .scroll-progress-bar {
+            height: 100%;
+            background: var(--gradient-primary);
+            width: 0%;
+            transition: width 0.1s ease;
+            box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+        }
+
+        /* ===== LOADING SCREEN ===== */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity var(--transition-slow), visibility var(--transition-slow);
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-content {
+            text-align: center;
+        }
+
+        .loading-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .loading-logo i {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .loading-logo h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin: 0;
+        }
+
+        .loading-logo span {
+            color: var(--primary-color);
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .loading-progress {
+            width: 200px;
+            height: 4px;
+            background: var(--gray-light);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--gradient-primary);
+            width: 0%;
+            animation: loading 2s ease-in-out forwards;
+        }
+
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* Rest of your existing CSS remains the same... */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-normal);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: var(--section-spacing) 0;
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            z-index: 9999;
+            border-radius: 0 0 var(--border-radius-sm) 0;
+            transition: top var(--transition-normal);
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(241, 245, 249, 0.8);
+            z-index: 1000;
+            height: var(--header-height);
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow-md);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--dark-color);
+        }
+
+        .logo-text span {
+            color: var(--primary-color);
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: var(--gray-color);
+            margin: 0;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-menu ul {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--dark-light);
+            padding: 8px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link i {
+            font-size: 0.9rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition-normal);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-join-btn {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== MOBILE TOGGLE ===== */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .toggle-line {
+            width: 100%;
+            height: 3px;
+            background: var(--dark-color);
+            border-radius: 3px;
+            transition: var(--transition-normal);
+        }
+
+        .mobile-toggle.active .toggle-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+            background: var(--primary-color);
+        }
+
+        .mobile-toggle.active .toggle-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active .toggle-line:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+            background: var(--primary-color);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: var(--border-radius-md);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-normal);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== PAGE HERO ===== */
+        .activities-hero {
+            min-height: 60vh;
+            padding-top: calc(var(--header-height) + 40px);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            color: var(--dark-color);
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== ACTIVITY FILTERS ===== */
+        .activity-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            background: white;
+            border: 2px solid var(--gray-light);
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--dark-light);
+            cursor: pointer;
+            transition: var(--transition-normal);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .filter-btn i {
+            font-size: 0.9rem;
+        }
+
+        /* ===== ACTIVITY GRID ===== */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--gray-light);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .activity-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .activity-card:hover .activity-image img {
+            transform: scale(1.05);
+        }
+
+        .activity-category {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .activity-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .activity-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .activity-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .activity-description {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .activity-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .activity-duration {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+
+        .activity-duration i {
+            color: var(--primary-color);
+        }
+
+        .activity-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            padding: 6px 12px;
+            background: var(--light-gray);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--gray-color);
+            border: 1px solid var(--gray-light);
+        }
+
+        .tag.skill-level {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+        }
+
+        /* ===== ACTIVITY DETAILS MODAL ===== */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-normal);
+            padding: 20px;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(30px);
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+        }
+
+        .modal-close:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            padding: 40px 40px 20px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .modal-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .modal-header .category {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .modal-body {
+            padding: 30px 40px;
+        }
+
+        .modal-section {
+            margin-bottom: 30px;
+        }
+
+        .modal-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-section h3 i {
+            color: var(--primary-color);
+        }
+
+        .modal-footer {
+            padding: 20px 40px 40px;
+            border-top: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        /* ===== ACTIVITY TIMELINE ===== */
+        .timeline-section {
+            background: linear-gradient(135deg, rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.95));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--gradient-primary);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-light);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: auto;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--primary-color);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45%;
+            padding: 10px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-date {
+            text-align: right;
+            right: 55%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-date {
+            left: 55%;
+        }
+
+        /* ===== TOAST ===== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: white;
+            padding: 20px 25px;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 9999;
+            transform: translateX(150%);
+            transition: transform var(--transition-normal);
+            border-left: 4px solid var(--success-color);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success {
+            border-left-color: var(--success-color);
+        }
+
+        .toast.error {
+            border-left-color: var(--error-color);
+        }
+
+        .toast.warning {
+            border-left-color: var(--warning-color);
+        }
+
+        .toast-icon {
+            font-size: 1.5rem;
+        }
+
+        .toast.success .toast-icon {
+            color: var(--success-color);
+        }
+
+        .toast.error .toast-icon {
+            color: var(--error-color);
+        }
+
+        .toast.warning .toast-icon {
+            color: var(--warning-color);
+        }
+
+        .toast-content {
+            flex: 1;
+        }
+
+        .toast-content p {
+            margin: 0;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+        .toast-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo i {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+        }
+
+        .footer-logo h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: white;
+        }
+
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 5px 0 0;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition-normal);
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition-normal);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+            padding-left: 5px;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-info i {
+            color: var(--primary-light);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom i {
+            color: var(--accent-color);
+            margin: 0 5px;
+        }
+
+        /* Chatbot Styles - Add this to your existing CSS */
+.chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-window {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.chatbot-window.active {
+    display: flex;
+}
+
+.chatbot-header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: var(--light-gray);
+}
+
+.message {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .message-content {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 18px 18px 4px 18px;
+    max-width: 80%;
+}
+
+.bot-message .message-content {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 18px 18px 18px 4px;
+    max-width: 80%;
+    box-shadow: var(--shadow-sm);
+    color: var(--dark-color);
+}
+
+.message-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.bot-message .message-icon {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.user-message .message-icon {
+    background: var(--gray-color);
+    color: white;
+    order: 2;
+}
+
+.chatbot-input {
+    padding: 15px;
+    background: white;
+    border-top: 1px solid var(--gray-light);
+    display: flex;
+    gap: 10px;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius-md);
+    font-family: inherit;
+}
+
+.chatbot-input button {
+    padding: 10px 20px;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: var(--border-radius-md);
+    color: white;
+    cursor: pointer;
+}
+
+.typing-indicator {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    background: white;
+    border-radius: 18px;
+    width: fit-content;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gray-color);
+    animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-10px); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .chatbot-window {
+        width: 300px;
+        height: 450px;
+        bottom: 80px;
+        right: 15px;
+    }
+    
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+        bottom: 80px;
+        right: 15px;
+    }
+}
+
+        /* ===== RESPONSIVE DESIGN ===== */
+
+        /* Tablets */
+        @media screen and (max-width: 991px) {
+            :root {
+                --section-spacing: 70px;
+                --header-height: 70px;
+            }
+            
+            .hero-title {
+                font-size: 2.6rem;
+            }
+            
+            .activities-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+            }
+            
+            .timeline-date {
+                width: 60px;
+                left: 30px !important;
+                right: auto !important;
+                text-align: center !important;
+                top: -30px;
+                transform: none;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile Devices */
+        @media screen and (max-width: 767px) {
+            :root {
+                --section-spacing: 60px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            /* Header & Navigation */
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: var(--header-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                background: white;
+                transition: var(--transition-normal);
+                overflow-y: auto;
+                box-shadow: var(--shadow-lg);
+                border-top: 1px solid var(--gray-light);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 0;
+            }
+            
+            .nav-menu li {
+                width: 100%;
+            }
+            
+            .nav-link {
+                padding: 15px 20px;
+                border-radius: var(--border-radius-md);
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-size: 1.1rem;
+            }
+            
+            .nav-link:hover,
+            .nav-link.active {
+                background: var(--light-gray);
+            }
+            
+            .nav-link::after {
+                display: none;
+            }
+            
+            .nav-join-btn {
+                width: 100%;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            
+            /* Hero Section */
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            /* Activities */
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .activity-filters {
+                gap: 10px;
+            }
+            
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            /* Modal */
+            .modal-content {
+                padding: 0;
+            }
+            
+            .modal-header,
+            .modal-body,
+            .modal-footer {
+                padding: 20px;
+            }
+            
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            /* Back to Top */
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            /* Toast */
+            .toast {
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                transform: translateY(150%);
+            }
+            
+            .toast.show {
+                transform: translateY(0);
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media screen and (max-width: 480px) {
+            .hero-title {
+                font-size: 1.9rem;
+            }
+            
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .activity-card,
+            .timeline-content {
+                padding: 15px;
+            }
+            
+            .modal-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .btn:hover,
+            .nav-link:hover,
+            .activity-card:hover,
+            .filter-btn:hover,
+            .back-to-top:hover,
+            .footer-social a:hover {
+                transform: none;
+            }
+            
+            .nav-link.active::after {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="web-logo"><img src="ai-logo.png" alt="AI Club Logo" height="100" width="100"></i>
+                <h2>AI Club<span>IFIM</span></h2>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo" aria-label="AI Club IFIM College">
+                <div class="logo-icon">
+                    <i class="web-logo"><img src="ai-logo.png" alt="AI Club Logo" height="100" width="100"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>AI <span>Club</span></h1>
+                    <p>IFIM College, Bangalore</p>
+                </div>
+            </div>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="AI WEBSITE.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="AI WEBSITE.html#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="Activities.html" class="nav-link active"><i class="fas fa-tasks"></i> Activities</a></li>
+                    <li><a href="Team.html" class="nav-link"><i class="fas fa-users"></i> Teams</a></li>
+                    <li><a href="Event.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                    <!-- Blog link added here -->
+                    <li><a href="Blogs.html" class="nav-link"><i class="fas fa-book"></i> Blog</a></li>
+                    <li><a href="AI WEBSITE.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="AI WEBSITE.html#contact" class="btn nav-join-btn"><i class="fas fa-user-plus"></i> Join Now</a></li>
+                    <img src="ifim-logo.png" alt="IFIM College Logo" class="nav-logo" width="40" height="40">
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="activities-hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">AI Club <span class="highlight">Activities</span></h1>
+                <p class="hero-subtitle">Explore our diverse range of hands-on workshops, hackathons, research projects, and competitions designed to build your AI skills and knowledge.</p>
+                <div class="activity-filters" id="activityFilters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th-large"></i> All Activities
+                    </button>
+                    <button class="filter-btn" data-filter="workshop">
+                        <i class="fas fa-chalkboard-teacher"></i> Workshops
+                    </button>
+                    <button class="filter-btn" data-filter="hackathon">
+                        <i class="fas fa-laptop-code"></i> Hackathons
+                    </button>
+                    <button class="filter-btn" data-filter="project">
+                        <i class="fas fa-code-branch"></i> Projects
+                    </button>
+                    <button class="filter-btn" data-filter="lecture">
+                        <i class="fas fa-microphone"></i> Lectures
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Activities Section -->
+    <main id="main-content">
+        <section class="activities-section section-padding">
+            <div class="container">
+                <div class="activities-grid" id="activitiesGrid">
+                    <!-- Activities will be loaded via JavaScript -->
+                </div>
+                
+                <div class="text-center">
+                    <p class="section-subtitle" style="text-align: center; margin-bottom: 30px;">Can't find what you're looking for? Suggest a new activity!</p>
+                    <a href="C:\Users\dhanr\OneDrive\Desktop\fake.html#contact" class="btn btn-primary">
+                        <i class="fas fa-lightbulb"></i> Suggest Activity
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Timeline -->
+        <section class="timeline-section section-padding">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                    <h2 class="section-title" style="font-size: 2.8rem;">Activity <span class="highlight">Timeline</span></h2>
+                    <p class="section-subtitle" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Track our upcoming activities and events throughout the academic year</p>
+                </div>
+                
+                <div class="timeline" id="activityTimeline">
+                    <!-- Timeline will be loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div>
+                            <h3>AI Club</h3>
+                            <p>IFIM College, Bangalore</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Empowering the next generation of AI innovators and researchers through hands-on activities and collaborative projects.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="C:\Users\dhanr\OneDrive\Desktop\AI Club\AI WEBSITE.html">Home</a></li>
+                        <li><a href="C:\Users\dhanr\OneDrive\Desktop\AI Club\AI WEBSITE.html#about">About Us</a></li>
+                        <li><a href="C:\Users\dhanr\OneDrive\Desktop\AI Club\Activities.html">Activities</a></li>
+                        <li><a href="C:\Users\dhanr\OneDrive\Desktop\AI Club\AI WEBSITE.html#events">Events</a></li>
+                        <li><a href="C:\Users\dhanr\OneDrive\Desktop\AI Club\AI WEBSITE.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Activity Types</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-filter="workshop">Workshops</a></li>
+                        <li><a href="#" data-filter="hackathon">Hackathons</a></li>
+                        <li><a href="#" data-filter="project">Research Projects</a></li>
+                        <li><a href="#" data-filter="lecture">Guest Lectures</a></li>
+                        <li><a href="#" data-filter="competition">Competitions</a></li>
+                        <li><a href="#" data-filter="community">Community Outreach</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> IFIM College, Electronics City, Bengaluru</p>
+                        <p><i class="fas fa-envelope"></i> aiclub@ifim.edu.in</p>
+                        <p><i class="fas fa-phone"></i> +91 80 4146 7700</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AI Club, IFIM College. All Rights Reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> by AI Club Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Activity Detail Modal -->
+    <div class="modal" id="activityModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2 id="modalTitle">Activity Title</h2>
+                <span class="category" id="modalCategory">Workshop</span>
+                <p id="modalShortDescription">Short description of the activity</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3><i class="fas fa-info-circle"></i> Description</h3>
+                    <p id="modalDescription">Full description of the activity goes here.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3><i class="fas fa-list-check"></i> Learning Outcomes</h3>
+                    <ul id="modalOutcomes" style="padding-left: 20px; margin-bottom: 20px;">
+                        <!-- Outcomes will be added via JS -->
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3><i class="fas fa-calendar-alt"></i> Schedule & Details</h3>
+                    <div id="modalDetails" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <!-- Details will be added via JS -->
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3><i class="fas fa-tags"></i> Tags</h3>
+                    <div class="activity-tags" id="modalTags">
+                        <!-- Tags will be added via JS -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modalCloseBtn">
+                    <i class="fas fa-times"></i> Close
+                </button>
+                <button class="btn btn-primary" id="modalRegisterBtn">
+                    <i class="fas fa-user-plus"></i> Register for Activity
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Chatbot -->
+<div class="chatbot-container">
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-robot"></i>
+    </button>
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3><i class="fas fa-robot"></i> AI Club Assistant</h3>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    Hi! I'm the AI Club Assistant. Ask me anything about:
+                    <br>• Club membership & activities
+                    <br>• Events & workshops
+                    <br>• AI learning resources
+                    <br>• How to join
+                    <br><br>What would you like to know?
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Ask me anything about AI Club...">
+            <button id="sendMessageBtn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ===== AI CLUB CHATBOT =====
+const clubKnowledge = {
+    join: "To join AI Club, you can:\n1. Click the 'Join Now' button on our website\n2. Fill out the membership form\n3. Attend our next orientation event\n\nAll IFIM students are welcome! No prior coding experience needed.",
+    membership: "Membership is FREE for all IFIM College students! Benefits include: access to workshops, project mentorship, networking events, and AI resources.",
+    eligibility: "Any student enrolled at IFIM College can join! Whether you're from B.Tech, B.Sc, MBA, or any other program, you're welcome to be part of our AI community.",
+    fee: "There are no membership fees! The AI Club is completely free for all IFIM students.",
+    activities: "We organize:\n• Weekly AI workshops\n• Monthly hackathons\n• Guest lectures from industry experts\n• Research projects\n• AI bootcamps\n• Networking events\n\nCheck our Activities page for upcoming events!",
+    workshops: "We conduct workshops on:\n• Python Programming\n• Machine Learning\n• Deep Learning\n• Computer Vision\n• Natural Language Processing\n• Data Science\n\nWorkshops are held every Saturday!",
+    hackathon: "We organize hackathons every semester. Great opportunities to:\n• Build real-world projects\n• Win exciting prizes\n• Network with peers\n• Get mentorship from industry professionals",
+    projects: "Our members work on various AI projects like:\n• Chatbot Development\n• Image Recognition\n• Predictive Analytics\n• AI for Social Good\n\nYou can collaborate with team members on your own ideas!",
+    events: "Upcoming events:\n• AI Bootcamp (March 15-20)\n• Machine Learning Workshop (March 25)\n• Guest Lecture: AI in Healthcare (April 5)\n• Annual AI Symposium (April 20)\n\nCheck our Events page for details and registration!",
+    symposium: "The Annual AI Symposium is our flagship event! Features:\n• Keynote speeches\n• Research paper presentations\n• AI project exhibition\n• Networking sessions\n• Industry panel discussions",
+    resources: "We provide:\n• Curated learning materials\n• Project ideas\n• Research papers\n• AI tools guide\n• Python libraries tutorials\n\nContact our club mentors for personalized guidance!",
+    python: "We recommend starting with Python for AI. Resources:\n• Google's Python Class (free)\n• Python.org tutorials\n• Our club's Python workshops\n• Coursera's Python for Everybody",
+    ml: "To start with Machine Learning:\n1. Learn Python basics\n2. Study statistics\n3. Take Andrew Ng's ML course on Coursera\n4. Practice on Kaggle\n5. Join our ML study group!",
+    career: "AI career opportunities:\n• Machine Learning Engineer\n• Data Scientist\n• AI Researcher\n• Computer Vision Engineer\n• NLP Specialist\n\nWe offer career guidance and industry connections!",
+    contact: "You can reach us:\n• Email: aiclub@ifim.edu.in\n• Phone: +91 80 4146 7700\n• Visit: IFIM College, Electronics City\n\nFollow us on social media for updates!",
+    location: "IFIM College, #8P & 9P, KIADB Industrial Area, Electronics City Phase 1, Bengaluru, Karnataka 560100",
+    timing: "Club activities are usually held on weekends (Saturdays 2-5 PM). We also have evening sessions on weekdays for working students.",
+    about: "AI Club is a student-led initiative at IFIM College dedicated to exploring Artificial Intelligence, Machine Learning, and Data Science. We provide hands-on learning, projects, and networking opportunities.",
+    vision: "Our vision is to create future AI leaders who drive technological innovation and make a positive impact on society.",
+    help: "I can help you with:\n• Membership information\n• Upcoming events\n• Learning resources\n• Club activities\n• Contact details\n\nJust ask me anything about AI Club!"
+};
+
+const keywordMap = {
+    join: ['join', 'register', 'sign up', 'become member', 'how to join'],
+    membership: ['membership', 'member', 'benefits'],
+    eligibility: ['eligible', 'who can join', 'requirements', 'prerequisite'],
+    fee: ['fee', 'cost', 'price', 'free', 'payment'],
+    activities: ['activities', 'what do you do', 'club does', 'work'],
+    workshops: ['workshop', 'training', 'learn', 'classes'],
+    hackathon: ['hackathon', 'hack', 'competition'],
+    projects: ['project', 'build', 'create', 'develop'],
+    events: ['event', 'upcoming', 'schedule', 'calendar'],
+    symposium: ['symposium', 'annual', 'flagship'],
+    resources: ['resource', 'material', 'study', 'learn'],
+    python: ['python', 'programming', 'coding'],
+    ml: ['machine learning', 'ml', 'ai', 'artificial intelligence'],
+    career: ['career', 'job', 'opportunity', 'placement'],
+    contact: ['contact', 'reach', 'email', 'phone', 'call'],
+    location: ['location', 'address', 'where', 'campus'],
+    timing: ['timing', 'time', 'schedule', 'when'],
+    about: ['about', 'what is', 'club info'],
+    vision: ['vision', 'mission', 'goal'],
+    help: ['help', 'support', 'assist', 'what can you do']
+};
+
+function findBestResponse(message) {
+    message = message.toLowerCase();
+    for (const [key, response] of Object.entries(clubKnowledge)) {
+        if (message.includes(key)) return response;
+    }
+    for (const [responseKey, keywords] of Object.entries(keywordMap)) {
+        for (const keyword of keywords) {
+            if (message.includes(keyword)) return clubKnowledge[responseKey];
+        }
+    }
+    const defaultResponses = [
+        "That's a great question! I'd recommend checking out our Activities page or reaching out to our club coordinators for more details. 😊",
+        "I don't have specific information about that right now. Would you like to know about our workshops, events, or how to join instead?",
+        "Let me help you with that! For detailed information, please contact our club coordinators at aiclub@ifim.edu.in",
+        "I'm still learning! For now, I can tell you about membership, events, workshops, and learning resources. What would you like to know?"
+    ];
+    return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+}
+
+function toggleChatbot() {
+    document.getElementById('chatbotWindow').classList.toggle('active');
+}
+
+function closeChatbot() {
+    document.getElementById('chatbotWindow').classList.remove('active');
+}
+
+function sendMessage() {
+    const input = document.getElementById('chatbotInput');
+    const message = input.value.trim();
+    if (!message) return;
+    
+    addMessage(message, 'user');
+    input.value = '';
+    showTypingIndicator();
+    
+    setTimeout(() => {
+        removeTypingIndicator();
+        addMessage(findBestResponse(message), 'bot');
+        scrollToBottom();
+    }, 500);
+}
+
+function addMessage(text, sender) {
+    const container = document.getElementById('chatbotMessages');
+    const div = document.createElement('div');
+    div.className = `message ${sender}-message`;
+    const icon = sender === 'bot' ? '<div class="message-icon"><i class="fas fa-robot"></i></div>' : '<div class="message-icon"><i class="fas fa-user"></i></div>';
+    div.innerHTML = icon + `<div class="message-content">${text.replace(/\n/g, '<br>')}</div>`;
+    container.appendChild(div);
+    scrollToBottom();
+}
+
+function showTypingIndicator() {
+    const container = document.getElementById('chatbotMessages');
+    const div = document.createElement('div');
+    div.className = 'message bot-message';
+    div.id = 'typingIndicator';
+    div.innerHTML = `<div class="message-icon"><i class="fas fa-robot"></i></div><div class="typing-indicator"><span></span><span></span><span></span></div>`;
+    container.appendChild(div);
+    scrollToBottom();
+}
+
+function removeTypingIndicator() {
+    const indicator = document.getElementById('typingIndicator');
+    if (indicator) indicator.remove();
+}
+
+function scrollToBottom() {
+    const container = document.getElementById('chatbotMessages');
+    container.scrollTop = container.scrollHeight;
+}
+
+// Initialize chatbot
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('chatbotToggle');
+    const closeBtn = document.getElementById('chatbotClose');
+    const sendBtn = document.getElementById('sendMessageBtn');
+    const input = document.getElementById('chatbotInput');
+    
+    if (toggleBtn) toggleBtn.addEventListener('click', toggleChatbot);
+    if (closeBtn) closeBtn.addEventListener('click', closeChatbot);
+    if (sendBtn) sendBtn.addEventListener('click', sendMessage);
+    if (input) input.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
+});
+        // ===== SCROLL PROGRESS BAR =====
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress-bar');
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // ===== LOADING SCREEN =====
+        document.addEventListener('DOMContentLoaded', () => {
+            // Remove loading screen
+            setTimeout(() => {
+                const loadingScreen = document.getElementById('loadingScreen');
+                loadingScreen.classList.add('hidden');
+                
+                // Initialize other components after loading screen disappears
+                setTimeout(() => {
+                    initNavigation();
+                    initScrollEffects();
+                    generateActivities();
+                    generateTimeline();
+                    initFilters();
+                    initModal();
+                    initAnimations();
+                    
+                    // Set current year in footer
+                    document.querySelector('.footer-bottom p:first-child').innerHTML = 
+                        `&copy; ${new Date().getFullYear()} AI Club, IFIM College. All Rights Reserved.`;
+                }, 500);
+            }, 2000);
+        });
+
+        // ===== TOAST NOTIFICATIONS =====
+        function showToast(message, type = 'success') {
+            // Remove existing toast
+            const existingToast = document.querySelector('.toast.show');
+            if (existingToast) {
+                existingToast.classList.remove('show');
+                setTimeout(() => {
+                    if (existingToast.parentNode) {
+                        existingToast.remove();
+                    }
+                }, 300);
+            }
+
+            // Create new toast
+            const toastElement = document.createElement('div');
+            toastElement.className = `toast ${type}`;
+            toastElement.innerHTML = `
+                <div class="toast-icon">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                </div>
+                <div class="toast-content">
+                    <p>${message}</p>
+                </div>
+                <button class="toast-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+
+            // Add styles
+            toastElement.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                background: white;
+                padding: 20px 25px;
+                border-radius: var(--border-radius-md);
+                box-shadow: var(--shadow-lg);
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                z-index: 9999;
+                transform: translateX(150%);
+                transition: transform var(--transition-normal);
+                max-width: 400px;
+            `;
+
+            // Add border based on type
+            const borderColor = type === 'success' ? 'var(--success-color)' : 
+                               type === 'error' ? 'var(--error-color)' : 'var(--warning-color)';
+            toastElement.style.borderLeft = `4px solid ${borderColor}`;
+
+            // Add to DOM
+            document.body.appendChild(toastElement);
+
+            // Show toast
+            setTimeout(() => {
+                toastElement.classList.add('show');
+            }, 10);
+
+            // Close button
+            const closeBtn = toastElement.querySelector('.toast-close');
+            closeBtn.addEventListener('click', () => {
+                hideToast(toastElement);
+            });
+
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                hideToast(toastElement);
+            }, 5000);
+
+            // Handle multiple toasts
+            const toasts = document.querySelectorAll('.toast');
+            toasts.forEach((t, index) => {
+                if (index > 0) {
+                    t.style.bottom = `${30 + (index * 80)}px`;
+                }
+            });
+        }
+
+        function hideToast(toastElement) {
+            toastElement.classList.remove('show');
+            setTimeout(() => {
+                if (toastElement.parentNode) {
+                    toastElement.remove();
+                }
+            }, 300);
+        }
+
+        // DOM Elements
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        const backToTop = document.getElementById('backToTop');
+        const activityFilters = document.getElementById('activityFilters');
+        const activitiesGrid = document.getElementById('activitiesGrid');
+        const activityTimeline = document.getElementById('activityTimeline');
+        const activityModal = document.getElementById('activityModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalRegisterBtn = document.getElementById('modalRegisterBtn');
+
+        // Activity Data
+        const activities = [
+            {
+                id: 1,
+                title: "TBA",
+                category: "workshop",
+                shortDesc: "TBA",
+                description: "TBA",
+                outcomes: [
+                    "NONE"
+                ],
+                icon: "fas fa-brain",
+                duration: "3 hours",
+                level: "Beginner",
+                prerequisites: "TBA",
+                frequency: "Monthly",
+                nextDate: "TBA",
+                location: "TBA",
+                tags: ["TBA"],
+                
+            },
+            {
+                id: 2,
+                title: "TBA",
+                category: "hackathon",
+                shortDesc: "TBA",
+                description: "TBA.",
+                outcomes: [
+                    "TBA"
+                ],
+                icon: "fas fa-laptop-code",
+                duration: "24 hours",
+                level: "Intermediate",
+                prerequisites: "TBA",
+                frequency: "Annual",
+                nextDate: "TBA",
+                location: "TBA",
+                tags: ["TBA"],
+                
+            },
+            {
+                id: 3,
+                title: "TBA",
+                category: "project",
+                shortDesc: "TBA",
+                description: "TBA.",
+                outcomes: [
+                    "TBA"
+                ],
+                icon: "fas fa-eye",
+                duration: "TBA",
+                level: "Advanced",
+                prerequisites: "TBA",
+                frequency: "Ongoing",
+                nextDate: "Rolling admission",
+                location: "AI Research Lab",
+                tags: ["Research", "Computer Vision", "Advanced", "Long-term"],
+                
+            },
+            {
+                id: 4,
+                title: "TBA",
+                category: "lecture",
+                shortDesc: "TBA",
+                description: "TBA",
+                outcomes: [
+                    "TBA"
+                ],
+                icon: "fas fa-microphone",
+                duration: "TBA",
+                level: "TBA",
+                prerequisites: "None",
+                frequency: "Quarterly",
+                nextDate: "Nov 5, 2023",
+                location: "Auditorium, IFIM College",
+                tags: ["Networking", "Industry", "Healthcare", "Lecture"],
+               
+            },
+            {
+                id: 5,
+                title: "TBA",
+                category: "workshop",
+                shortDesc: "TBA",
+                description: "TBA",
+                outcomes: [
+                    "TBA"
+                ],
+                icon: "fas fa-chart-line",
+                duration: "TBA",
+                level: "TBA",
+                prerequisites: "TBA",
+                frequency: "Quarterly",
+                nextDate: "Nov 18-20, 2023",
+                location: "Computer Lab, Block B",
+                tags: ["Data Science", "Python", "Hands-on", "Bootcamp"],
+                
+            },
+            {
+                id: 6,
+                title: "TBA",
+                category: "TBA",
+                shortDesc: "TBA",
+                description: "TBA",
+                outcomes: [
+                    "TBA"
+                ],
+                icon: "fas fa-trophy",
+                duration: "TBA",
+                level: "TBA",
+                prerequisites: "TBA",
+                frequency: "Weekly",
+                nextDate: "Every Thursday",
+                location: "Online & Lab 2",
+                tags: ["Kaggle", "Competition", "Team-based", "Advanced"],
+               
+            },
+            {
+                id: 7,
+                title: "TBA",
+                category: "workshop",
+                shortDesc: "TBA",
+                description: "TBA",
+                outcomes: [
+                    "TBA"
+                ],
+                icon: "fas fa-balance-scale",
+                duration: "4 hours",
+                level: "All levels",
+                prerequisites: "None",
+                frequency: "Bi-monthly",
+                nextDate: "Dec 2, 2023",
+                location: "Seminar Room 4",
+                tags: ["Ethics", "Responsible AI", "Discussion", "All Levels"],
+                
+            },
+            {
+                id: 8,
+                title: "TBA",
+                category: "TBA",
+                shortDesc: "TBA",
+                description: "TBA",
+                outcomes: [
+                    "TBA"
+                ],
+                icon: "fas fa-code-branch",
+                duration: "6 weeks",
+                level: "Intermediate",
+                prerequisites: "Python, Git knowledge",
+                frequency: "Twice per semester",
+                nextDate: "Jan 15, 2024",
+                location: "Online & Lab 1",
+                tags: ["Open Source", "Git", "Collaboration", "Intermediate"],
+               
+            }
+        ];
+
+        // Timeline Data
+        const timelineData = [
+            {
+                date: "January 2026",
+                title: "Git Workshop",
+                description: "Git worhshop conducted on 30th January Venue:BS 11, timing 9:30. working with git and github",
+                category: "workshop"
+            },
+            {
+                date: "March 2026",
+                title: "Productive tools in AI ",
+                description: "Research project comming soon  ",
+                category: "Research"
+            },
+            {
+                date: "March 2026",
+                title: "TBA",
+                description: "TBA",
+                category: "lecture"
+            },
+            {
+                date: "March 2026",
+                title: "TBA",
+                description: "TBA",
+                category: "workshop"
+            },
+            {
+                date: "April 2026",
+                title: "TBA",
+                description: "TBA",
+                category: "project"
+            },
+            {
+                date: "May 2026",
+                title: "TBA",
+                description: "TBA",
+                category: "competition"
+            }
+        ];
+
+        // Navigation
+        function initNavigation() {
+            mobileToggle.addEventListener('click', toggleMobileMenu);
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        }
+
+        function toggleMobileMenu() {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            mobileToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+
+        // Scroll Effects
+        function initScrollEffects() {
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Back to top button
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            // Back to top
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        closeMobileMenu();
+                        
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Generate Activities
+        function generateActivities() {
+            activitiesGrid.innerHTML = activities.map(activity => `
+                <div class="activity-card" data-category="${activity.category}" data-id="${activity.id}">
+                    <div class="activity-image">
+                        <img src="${activity.image}" alt="${activity.title}" loading="lazy">
+                        <span class="activity-category">${getCategoryLabel(activity.category)}</span>
+                    </div>
+                    <div class="activity-content">
+                        <div class="activity-header">
+                            <div class="activity-icon">
+                                <i class="${activity.icon}"></i>
+                            </div>
+                            <h3>${activity.title}</h3>
+                        </div>
+                        <p class="activity-description">${activity.shortDesc}</p>
+                        
+                        <div class="activity-tags">
+                            <span class="tag skill-level">${activity.level}</span>
+                            ${activity.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        
+                        <div class="activity-meta">
+                            <div class="activity-duration">
+                                <i class="far fa-clock"></i>
+                                <span>${activity.duration}</span>
+                            </div>
+                            <button class="btn btn-primary btn-small view-details" data-id="${activity.id}">
+                                <i class="fas fa-info-circle"></i> Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add event listeners to detail buttons
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function() {
+                    const activityId = parseInt(this.getAttribute('data-id'));
+                    openActivityModal(activityId);
+                });
+            });
+        }
+
+        // Generate Timeline
+        function generateTimeline() {
+            activityTimeline.innerHTML = timelineData.map((item, index) => `
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">${item.date}</div>
+                    <div class="timeline-content">
+                        <div class="activity-header">
+                            <div class="activity-icon" style="width: 40px; height: 40px; font-size: 1rem;">
+                                <i class="${getCategoryIcon(item.category)}"></i>
+                            </div>
+                            <h3 style="margin: 0;">${item.title}</h3>
+                        </div>
+                        <p style="margin: 10px 0 0; color: var(--gray-color);">${item.description}</p>
+                        <span class="tag" style="margin-top: 10px;">${getCategoryLabel(item.category)}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Activity Filters
+        function initFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter activities
+                    const filter = this.getAttribute('data-filter');
+                    filterActivities(filter);
+                });
+            });
+            
+            // Footer filter links
+            document.querySelectorAll('.footer-links a[data-filter]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update filter buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    document.querySelector(`.filter-btn[data-filter="${filter}"]`).classList.add('active');
+                    
+                    // Filter activities
+                    filterActivities(filter);
+                    
+                    // Scroll to activities
+                    window.scrollTo({
+                        top: document.querySelector('.activities-section').offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+
+        function filterActivities(filter) {
+            const activityCards = document.querySelectorAll('.activity-card');
+            
+            activityCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Activity Modal
+        function initModal() {
+            modalClose.addEventListener('click', closeModal);
+            modalCloseBtn.addEventListener('click', closeModal);
+            
+            // Close modal on outside click
+            activityModal.addEventListener('click', (e) => {
+                if (e.target === activityModal) {
+                    closeModal();
+                }
+            });
+            
+            // Register button
+            modalRegisterBtn.addEventListener('click', function() {
+                const activityId = this.getAttribute('data-id');
+                const activity = activities.find(a => a.id === parseInt(activityId));
+                
+                showToast(`Thank you for your interest in "${activity.title}"! You will receive registration details via email shortly.`, 'success');
+                closeModal();
+            });
+        }
+
+        function openActivityModal(activityId) {
+            const activity = activities.find(a => a.id === activityId);
+            
+            if (!activity) return;
+            
+            // Update modal content
+            document.getElementById('modalTitle').textContent = activity.title;
+            document.getElementById('modalCategory').textContent = getCategoryLabel(activity.category);
+            document.getElementById('modalShortDescription').textContent = activity.shortDesc;
+            document.getElementById('modalDescription').textContent = activity.description;
+            
+            // Update outcomes
+            const outcomesList = document.getElementById('modalOutcomes');
+            outcomesList.innerHTML = activity.outcomes.map(outcome => 
+                `<li style="margin-bottom: 8px; color: var(--gray-color);">${outcome}</li>`
+            ).join('');
+            
+            // Update details
+            const detailsContainer = document.getElementById('modalDetails');
+            detailsContainer.innerHTML = `
+                <div style="background: var(--light-gray); padding: 15px; border-radius: var(--border-radius-md);">
+                    <div style="font-weight: 600; color: var(--primary-color); margin-bottom: 5px;"><i class="far fa-clock"></i> Duration</div>
+                    <div>${activity.duration}</div>
+                </div>
+                <div style="background: var(--light-gray); padding: 15px; border-radius: var(--border-radius-md);">
+                    <div style="font-weight: 600; color: var(--primary-color); margin-bottom: 5px;"><i class="fas fa-signal"></i> Level</div>
+                    <div>${activity.level}</div>
+                </div>
+                <div style="background: var(--light-gray); padding: 15px; border-radius: var(--border-radius-md);">
+                    <div style="font-weight: 600; color: var(--primary-color); margin-bottom: 5px;"><i class="far fa-calendar"></i> Next Session</div>
+                    <div>${activity.nextDate}</div>
+                </div>
+                <div style="background: var(--light-gray); padding: 15px; border-radius: var(--border-radius-md);">
+                    <div style="font-weight: 600; color: var(--primary-color); margin-bottom: 5px;"><i class="fas fa-map-marker-alt"></i> Location</div>
+                    <div>${activity.location}</div>
+                </div>
+            `;
+            
+            // Update tags
+            const tagsContainer = document.getElementById('modalTags');
+            tagsContainer.innerHTML = `
+                <span class="tag skill-level">${activity.level}</span>
+                ${activity.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            `;
+            
+            // Update register button
+            modalRegisterBtn.setAttribute('data-id', activity.id);
+            
+            // Show modal
+            activityModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            activityModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Animations
+        function initAnimations() {
+            // Initialize AOS (Animation on Scroll)
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.activity-card, .timeline-content').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Add CSS for animations
+            const style = document.createElement('style');
+            style.textContent = `
+                .activity-card,
+                .timeline-content {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                }
+                
+                .activity-card.animate,
+                .timeline-content.animate {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                
+                /* Staggered animations */
+                .activity-card:nth-child(1) { transition-delay: 0.1s; }
+                .activity-card:nth-child(2) { transition-delay: 0.2s; }
+                .activity-card:nth-child(3) { transition-delay: 0.3s; }
+                .activity-card:nth-child(4) { transition-delay: 0.4s; }
+                .activity-card:nth-child(5) { transition-delay: 0.5s; }
+                .activity-card:nth-child(6) { transition-delay: 0.6s; }
+                .activity-card:nth-child(7) { transition-delay: 0.7s; }
+                .activity-card:nth-child(8) { transition-delay: 0.8s; }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Helper Functions
+        function getCategoryLabel(category) {
+            const labels = {
+                'workshop': 'Workshop',
+                'hackathon': 'Hackathon',
+                'project': 'Research Project',
+                'lecture': 'Guest Lecture',
+                'competition': 'Competition',
+                'community': 'Community Outreach'
+            };
+            return labels[category] || category;
+        }
+
+        function getCategoryIcon(category) {
+            const icons = {
+                'workshop': 'fas fa-chalkboard-teacher',
+                'hackathon': 'fas fa-laptop-code',
+                'project': 'fas fa-code-branch',
+                'lecture': 'fas fa-microphone',
+                'competition': 'fas fa-trophy',
+                'community': 'fas fa-hands-helping'
+            };
+            return icons[category] || 'fas fa-tasks';
+        }
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && activityModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Performance Optimization
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                // Update active nav link if needed
+                updateActiveNavLink();
+            }, 100);
+        });
+
+        // Update active nav link on scroll
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        // Error handling
+        window.addEventListener('error', (e) => {
+            console.error('Error:', e.error);
+            showToast('An error occurred. Please refresh the page.', 'error');
+        });
+
+        // Offline detection
+        window.addEventListener('offline', () => {
+            showToast('You are offline. Some features may not work.', 'warning');
+        });
+
+        window.addEventListener('online', () => {
+            showToast('You are back online!', 'success');
+        });
+    </script>
+</body>
+</html>
